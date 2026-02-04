@@ -7,6 +7,10 @@ ul {
   list-style-type: none;
 }
 
+hr{
+  margin: 12px 0;
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 3fr;
@@ -14,30 +18,36 @@ ul {
 }
 
 .header {
-  grid-column: 2 / 5;
+  grid-column: 2;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
+  margin-top: 24px;
+  padding-left: 8px;
 }
 
 .sidebar {
   grid-row: 1 / 5;
-  /* display: grid; */
   background-color: #007bff;
   color: white;
-  /* justify-self: start; */
+  padding: 24px;
 }
 
 .main-content {
   display: grid;
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-column: 2 / 5;
+  grid-column: 2;
   grid-row: 2 / 5;
+  background-color: lightgrey;
 }
 
 .search-bar {
   grid-column: 1 / 2;
+}
+
+.search-bar input {
+  outline: none;
 }
 
 .header-icons {
@@ -46,8 +56,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   font-weight: bold;
-  margin-right: 132px;
-
+  margin-right: 160px;
 }
 
 .buttons {
@@ -84,13 +93,8 @@ ul {
   font-size: 32px;
 }
 
-.card-projects .title {
+.card .title {
   font-weight: bold;
-}
-
-.card-projects p:nth-child(2) {
-  /* margin-top: 10px; */
-  /* margin-bottom: 10px; */
 }
 
 .card-announcements .title {
@@ -106,7 +110,6 @@ ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr repeat(3, 3fr);
-  background-color: lightgrey;
 }
 
 .project-title {
@@ -115,26 +118,26 @@ ul {
   margin-bottom: 15px;
 }
 
-.projects .card-projects {
+.projects .card {
   margin: 12px;
   padding: 16px;
-  /* border: 1px solid #ccc; */
   border-left: orange 8px solid;
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* width: 400px; */
 }
 
 .projects .icon {
- display: grid;
- grid-template-columns: 1fr 1fr 1fr;
- justify-items: end;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: end;
+  margin: 32px;
 }
 
-.icon {
-  /* display: grid;
-  grid-template-columns: 1fr 4fr; */
+.trending .icon {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin: 8px;
 }
 
 .search-bar input {
@@ -162,14 +165,17 @@ ul {
   margin-left: 16px;
 }
 
-.card-announcements {
-  background-color: lightgrey;
-}
-
-.card-announcements .card-projects {
+.card-announcements .card {
   margin: 12px;
   padding: 16px;
-  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.trending .card {
+  margin: 12px;
+  padding: 16px;
   border-radius: 8px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
